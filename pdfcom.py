@@ -21,7 +21,7 @@ size = temp_stream.tell()
 if 480 * 1024 <= size <= 500 * 1024:
   best_stream = temp_stream
 break
-elif size < 480 * 1024:
+  elif size < 480 * 1024:
   best_stream = temp_stream
 low = mid + 1
 else:
