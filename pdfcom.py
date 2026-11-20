@@ -19,7 +19,7 @@ temp_stream = io.BytesIO()
 img.save(temp_stream, format="JPEG", quality=mid)
 size = temp_stream.tell()
 if 480 * 1024 <= size <= 500 * 1024:
-best_stream = temp_stream
+  best_stream = temp_stream
 break
 elif size < 480 * 1024:
 best_stream = temp_stream
@@ -31,6 +31,6 @@ compressed_img = Image.open(best_stream)
 image_list.append(compressed_img)
 pdf_bytes = io.BytesIO()
 if image_list:
-image_list[0].save(pdf_bytes, format="PDF", save_all=True, append_images=image_list[1:])
+  image_list[0].save(pdf_bytes, format="PDF", save_all=True, append_images=image_list[1:])
 st.success("Compression Complete!")
 st.download_button("Download Compressed PDF", data=pdf_bytes.getvalue(), file_name="compressed.pdf", mime="application/pdf")
