@@ -14,7 +14,7 @@ low = 10
 high = 95
 best_stream = None
 while low <= high:
-mid = (low + high) // 2
+  mid = (low + high) // 2
 temp_stream = io.BytesIO()
 img.save(temp_stream, format="JPEG", quality=mid)
 size = temp_stream.tell()
