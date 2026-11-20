@@ -5,7 +5,7 @@ import io
 st.title("PDF Compressor")
 uploaded_file = st.file_uploader("Upload PDF", type="pdf")
 if uploaded_file is not None:
-doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
+  doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
 image_list = []
 for page in doc:
 pix = page.get_pixmap(dpi=150)
