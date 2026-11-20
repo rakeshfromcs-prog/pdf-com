@@ -25,7 +25,8 @@ elif size < 480 * 1024:
                     best_stream = temp_stream
                     low = mid + 1
 else:
-                    high = mid - 1best_stream.seek(0)
+                    high = mid - 1
+best_stream.seek(0)
 compressed_img = Image.open(best_stream)
 image_list.append(compressed_img)
 pdf_bytes = io.BytesIO()
