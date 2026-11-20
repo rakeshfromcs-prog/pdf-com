@@ -8,7 +8,7 @@ if uploaded_file is not None:
   doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
 image_list = []
 for page in doc:
-pix = page.get_pixmap(dpi=150)
+  pix = page.get_pixmap(dpi=150)
 img = Image.open(io.BytesIO(pix.tobytes()))
 low = 10
 high = 95
